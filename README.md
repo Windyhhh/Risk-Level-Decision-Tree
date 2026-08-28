@@ -2,9 +2,9 @@
 
 # ⛑️ Risk-Level-Decision-Tree
 
-### Construction-safety risk assessment with decision trees.
+### Decision-tree construction-safety risk assessment.
 
-Multi-factor risk classification, tree visualization and report generation.
+Predict worksite safety risk levels from 8 key features — interpretable, fast, and report-ready.
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
@@ -14,10 +14,20 @@ Multi-factor risk classification, tree visualization and report generation.
 
 ---
 
-**Risk-Level-Decision-Tree** classifies **construction-safety risk levels** with a decision tree — multi-factor analysis, tree visualization and automatic report generation.
+**Risk-Level-Decision-Tree** builds a decision-tree model that automatically grades **construction-worksite safety risk** from **8 key features** — with high interpretability (4-level tree), millisecond-level inference, and automated report generation.
 
 > [!NOTE]
-> 中文项目：施工安全风险评估——决策树分类评估，多因子分析，树可视化，报告生成。
+> 中文项目：工地安全风险等级智能评估——决策树分类，8 特征预测风险等级，可解释、毫秒级、自动出报告。
+
+---
+
+## Features
+
+- **Decision-tree classification** — grades risk from 8 features.
+- **Interpretable** — shallow 4-level tree, easy to audit.
+- **Real-time** — millisecond inference.
+- **Report generation** — automated analysis reports + tree visualization.
+- **Balanced dataset** — 200 samples, ~equal low/mid/high risk distribution (66.5% train accuracy).
 
 ---
 
@@ -29,22 +39,9 @@ cd Risk-Level-Decision-Tree
 
 pip install -r requirements.txt
 
-# run the full analysis
-python main.py
-
-# generate the report
-python generate_report.py
+python main.py              # run the full analysis
+python generate_report.py   # produce the report
 ```
-
-Data (`数据.xlsx`) and outputs (tree figure, report) are included.
-
----
-
-## Features
-
-- **Decision-tree classification** — risk-level prediction.
-- **Multi-factor** — analyze multiple risk factors.
-- **Report generation** — automated reports + tree visualization.
 
 ---
 
@@ -53,9 +50,9 @@ Data (`数据.xlsx`) and outputs (tree figure, report) are included.
 ```
 Risk-Level-Decision-Tree/
 ├── main.py                    # entry
-├── decision_tree_analysis.py # analysis
-├── generate_report.py        # report
-├── 数据.xlsx                  # input data
+├── decision_tree_analysis.py  # model training
+├── generate_report.py         # report + tree image
+├── 数据.xlsx                  # worksite data
 └── 决策树.png / 决策树分析报告.md
 ```
 
